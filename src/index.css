@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	padding: 0;
+}
+
+.items {
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+}
+
+.items li {
+	margin: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.avatar {
+	width: 100px;
+	border-radius: 50%;
+}
+
+.popular-item {
+	margin: 20px;
+	text-align: center;
+}
+
+.popular-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
