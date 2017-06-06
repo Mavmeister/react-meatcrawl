@@ -53,8 +53,7 @@ function getUserData(player){
 }
 
 function sortPlayers(players){
-	console.log('sorting...')
-	return players.sort( (a,b) => {
+	return players.sort((a,b) => {
 		return b.score - a.score
 	})
 }
