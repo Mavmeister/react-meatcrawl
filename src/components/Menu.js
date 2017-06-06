@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
-import Api from '../utils/api'
+import api from '../utils/api'
 
 //stateless functional
 const SelectItem = props => {
@@ -54,6 +54,8 @@ class Menu extends Component {
   }
   componentDidMount(){
   	this.updateItem(this.state.selectedItem)
+  	api.fetchRandom()
+  		
   }
   
   updateItem(item){
@@ -61,7 +63,7 @@ class Menu extends Component {
       selectedItem: item,
       repos: null
     })
-  	Api.fetchPopularRepos(item)
+  	api.fetchPopularRepos(item)
   		.then(repos => this.setState({
   			repos: repos
   		}))
